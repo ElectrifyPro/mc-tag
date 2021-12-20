@@ -1,0 +1,9 @@
+name: mc-tag
+main: com.pooled.mctag.MCTag
+version: 1.0
+plugin-api: 1.18
+commands:
+  tag:
+    description: Start the Tag game with a random or specified tagger.
+    usage: /<command> [player]
+    permission-message: You don't have permission.
