@@ -10,10 +10,7 @@ public final class MCTag extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Util.log("hi");
-        Server server = getServer();
 
-        server.getPluginManager().registerEvents(new PlayerMovementListener(), this);
     }
 
     @Override
