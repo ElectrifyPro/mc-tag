@@ -1,5 +1,6 @@
 package com.pooled.mctag;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
 import org.bukkit.Server;
@@ -11,15 +12,15 @@ public class Tag {
     /**
      * All players currently in the Tag game.
      */
-    Player[] players;
+    ArrayList<Player> players;
     Player it;
 
     /**
      * Create a Tag game with a random player as the tagger.
      */
-    public<T> Tag(Server server, Collection<T> players) {
+    public<T extends Player> Tag(Server server, Collection<T> players) {
         this.server = server;
-        this.players = players.toArray(new Player[players.size()]);
+        this.players = new ArrayList<Player>(players);
         this.it = Util.choice(this.players);
     }
 

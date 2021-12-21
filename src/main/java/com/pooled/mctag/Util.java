@@ -1,5 +1,7 @@
 package com.pooled.mctag;
 
+import java.util.ArrayList;
+
 import org.bukkit.Bukkit;
 
 public final class Util {
@@ -11,9 +13,9 @@ public final class Util {
     }
 
     /**
-     * Return a random value from the given array.
+     * Return a random value from the given ArrayList.
      */
-    public static<T> T choice(T[] array) {
-        return array[(int)Math.floor(Math.random() * array.length)];
+    public static<T> T choice(ArrayList<T> list) {
+        return list.get((int)Math.floor(Math.random() * list.size()));
     }
 }
