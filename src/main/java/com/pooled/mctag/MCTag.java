@@ -18,6 +18,7 @@ public final class MCTag extends JavaPlugin {
         if (sender.isOp() && cmd.getName().equalsIgnoreCase("tag")) {
             Server server = getServer();
             tag = new Tag(server, server.getOnlinePlayers());
+            tag.start();
             return true;
         }
 
