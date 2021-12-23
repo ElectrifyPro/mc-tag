@@ -15,6 +15,8 @@ import org.bukkit.potion.PotionEffectType;
 public class Tag {
     Server server;
 
+    TagScore score;
+
     /**
      * All players currently in the Tag game.
      */
@@ -92,6 +94,9 @@ public class Tag {
     public void start() {
         // create and teleport all players to a random location in the world border
         this.generateWorldBorder();
+
+        // display the scoreboard
+        this.score = new TagScore(this);
 
         // give seeker glowing effect with no particles
         this.it.addPotionEffect(new PotionEffect(PotionEffectType.GLOWING, 1_000_000, 1, false, false));
